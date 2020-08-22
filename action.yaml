@@ -1,0 +1,39 @@
+name: 'Deploy on Rancher'
+description: 'Action to deploy docker image on rancher'
+inputs:
+  rancher_access_key:
+    description: 'API Access key created in Rancher'
+    required: true
+  rancher_secret_key:
+    description: 'API Secret key created in Rancher'
+    required: true
+  rancher_workload_url_api:
+    description: 'API Url of your rancher project workload.'
+    required: true
+  rancher_namespace:
+    description: 'API Access key created in Rancher'
+    required: true
+  service_name:
+    description: 'Your namespace project'
+    required: true
+    default: 'default'
+  docker_image:
+    description: 'URL TO YOUR DOCKER IMAGE (Ex: AWS or DOCKER REGISTRY)'
+    required: true
+outputs:
+  response:
+    description: "Deploy Response"
+runs:
+  using: "composite"
+  steps:
+    - id: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - id: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - id: Push to Rancher
+      run: |
+        python deploy_to_rancher.py --rancher_access_key=${{ inputs.rancher_access_key }} --rancher_secret_key=${{ inputs.rancher_secret_key }} --rancher_workload_url_api=${{ inputs.rancher_workload_url_api }} --rancher_namespace=${{ inputs.rancher_namespace }} --service_name=${{ inputs.service_name }} --docker_image=${{ inputs.docker_image }}
