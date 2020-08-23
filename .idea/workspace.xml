@@ -143,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598203722514</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add .gitignore file">
+      <created>1598204053518</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598204053518</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add .gitignore file">
+      <created>1598204145764</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598204145764</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,17 +173,21 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
-    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598203722268">
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598204145540">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598203722268" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598203723822">
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598204145540" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598204146918">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598203723822" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598204146918" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598204050149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1598204050149" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1598204094482">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598204094482" />
   </component>
 </project>
