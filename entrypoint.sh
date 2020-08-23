@@ -43,6 +43,6 @@ python --version
 pip install click
 pip install requests
 
-python deploy_to_rancher.py --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
+python deploy_to_rancher.py -a "${rancher_access_key}" -b "${rancher_secret_key}" -c "${rancher_workload_url_api}" -d "${rancher_namespace}" -e "${rancher_service_name}" -f "${rancher_docker_image}"
 
 exit 0

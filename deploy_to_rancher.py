@@ -1,5 +1,5 @@
+import getopt
 import sys
-import click
 import requests
 
 
@@ -38,19 +38,6 @@ class DeployRancher:
                          json=response, auth=(self.access_key, self.secret_key))
 
 
-@click.command()
-@click.option('--rancher_access_key', default=None,
-              help='access key api')
-@click.option('--rancher_secret_key', default=None,
-              help='secret key api')
-@click.option('--rancher_workload_url_api', default=None,
-              help='url api workload')
-@click.option('--rancher_namespace', default=None,
-              help='name of namespace')
-@click.option('--rancher_service_name', default=None,
-              help='name of service')
-@click.option('--rancher_docker_image', default=None,
-              help='name of docker repo')
 def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                       rancher_service_name, rancher_docker_image):
     deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
@@ -59,9 +46,19 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_u
 
 
 if __name__ == '__main__':
+    argv = sys.argv[1:]
+
     try:
-        deploy_in_rancher()
-        sys.exit(0)
-    except ValueError as e:
-        print(e)
+        opts, args = getopt.getopt(argv, 'a:b:c:d:e:f:', ['foperand', 'soperand', 'toperand', 'fooperand','fioperand', 'sioperand'])
+        print(opts)
+        if len(opts) != 6:
+            print('usage: deploy_to_rancher.py -a <first_operand> -b <second_operand> '
+                  '-c <third_operand> -d <fourth_operand> -e <fifth_operand> -f <sixth_operand>')
+            sys.exit(1)
+        else:
+            deploy_in_rancher(opts[0][1], opts[1][1], opts[2][1], opts[3][1], opts[4][1], opts[5][1])
+
+    except getopt.GetoptError:
+        print('usage: deploy_to_rancher.py -a <first_operand> -b <second_operand> '
+              '-c <third_operand> -d <fourth_operand> -e <fifth_operand> -f <sixth_operand>')
         sys.exit(1)
