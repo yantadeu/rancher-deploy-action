@@ -8,18 +8,10 @@ rancher_namespace=$4
 rancher_service_name=$5
 rancher_docker_image=$6
 
-echo "${rancher_access_key}"
-echo "${rancher_secret_key}"
-echo "${rancher_workload_url_api}"
-echo "${rancher_namespace}"
-echo "${rancher_service_name}"
-echo "${rancher_docker_image}"
-
 if [ -z "${rancher_access_key}" ]; then
     echo "You must specify the rancher access key."
     exit 1
 fi
-
 
 if [ -z "${rancher_secret_key}" ]; then
     echo "You must specify the rancher secret key."
@@ -41,13 +33,12 @@ if [ -z "${rancher_service_name}" ]; then
     exit 1
 fi
 
-
 if [ -z "${rancher_docker_image}" ]; then
     echo "You must specify the docker image."
     exit 1
 fi
 
-python deploy_to_rancher.py --deploy=1 --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
+python3 deploy_to_rancher.py --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
 
 exit 0
 

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy_to_rancher.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploy_to_rancher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598201719551</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add .gitignore file">
+      <created>1598202636721</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598202636721</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add .gitignore file">
+      <created>1598202657630</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598202657630</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,13 +154,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
-    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598201719265">
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598202657366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598201719265" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598201720903">
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598202657366" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598202661527">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598201720903" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598202661527" />
   </component>
 </project>
