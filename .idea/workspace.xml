@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="" />
+    <list default="true" id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598201434230</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add .gitignore file">
+      <created>1598201719551</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598201719551</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,20 +130,21 @@
     <MESSAGE value="New configs tests actions.yaml" />
     <MESSAGE value="config the entrypoint.sh" />
     <MESSAGE value="config the entrypoint.sh in Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="config the entrypoint.sh in Dockerfile" />
+    <MESSAGE value="add .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598194314507">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
-    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598201433969">
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598201719265">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598201433969" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598201436040">
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598201719265" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598201720903">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598201436040" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598201720903" />
   </component>
 </project>

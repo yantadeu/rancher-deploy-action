@@ -39,6 +39,8 @@ class DeployRancher:
 
 
 @click.command()
+@click.option('--deploy', default=0,
+              help='deploy')
 @click.option('--rancher_access_key', default=None,
               help='access key api')
 @click.option('--rancher_secret_key', default=None,
@@ -51,7 +53,7 @@ class DeployRancher:
               help='name of service')
 @click.option('--rancher_docker_image', default=None,
               help='name of docker repo')
-def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
+def deploy_in_rancher(deploy, rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                       rancher_service_name, rancher_docker_image):
     deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                                rancher_service_name, rancher_docker_image)
