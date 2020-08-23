@@ -4,14 +4,15 @@ import requests
 
 
 class DeployRancher:
-    def __init__(self, rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace, service_name, docker_image):
+    def __init__(self, rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
+                 rancher_service_name, rancher_docker_image):
         self.access_key = rancher_access_key
         self.secret_key = rancher_secret_key
         self.rancher_workload_url_api = rancher_workload_url_api
         self.rancher_namespace = rancher_namespace
+        self.service_name = rancher_service_name
         self.rancher_deployment_path = '/deployment:'+self.rancher_namespace+':' + self.service_name
-        self.service_name = service_name
-        self.docker_image = docker_image
+        self.docker_image = rancher_docker_image
 
     def deploy(self):
         rget = requests.get(self.rancher_workload_url_api + self.rancher_deployment_path,
@@ -43,15 +44,17 @@ class DeployRancher:
 @click.option('--rancher_secret_key', default=None,
               help='secret key api')
 @click.option('--rancher_workload_url_api', default=None,
-              help='name of of service')
+              help='url api workload')
 @click.option('--rancher_namespace', default=None,
-              help='name of of service')
-@click.option('--service_name', default=None,
-              help='name of of service')
-@click.option('--docker_image', default=None,
+              help='name of namespace')
+@click.option('--rancher_service_name', default=None,
+              help='name of service')
+@click.option('--rancher_docker_image', default=None,
               help='name of docker repo')
-def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace, service_name, docker_image):
-    deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace, service_name, docker_image)
+def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
+                      rancher_service_name, rancher_docker_image):
+    deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
+                               rancher_service_name, rancher_docker_image)
     deployment.deploy()
 
 
@@ -60,4 +63,5 @@ if __name__ == '__main__':
         deploy_in_rancher()
         sys.exit(0)
     except ValueError as e:
+        print(e)
         sys.exit(1)
