@@ -41,6 +41,3 @@ fi
 python3 deploy_to_rancher.py --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
 
 exit 0
-
-echo "Erro on execute script to deploy on rancher"
-exit 1
