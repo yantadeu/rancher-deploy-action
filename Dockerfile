@@ -1,10 +1,9 @@
 FROM python:3.8
 
-COPY . /app
-WORKDIR /app
+COPY . /
 
 RUN echo 'teste'
-RUN chmod +x entrypoint.sh
-RUN pip install -r requirements.txt
+RUN chmod +x /entrypoint.sh
+RUN pip install -r /requirements.txt
 
-ENTRYPOINT [ "bash", "entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
