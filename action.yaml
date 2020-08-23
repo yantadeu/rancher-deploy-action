@@ -38,4 +38,4 @@ runs:
     - ${{ inputs.rancher_namespace }}
     - ${{ inputs.service_name }}
     - ${{ inputs.docker_image }}
-  entrypoint: 'deploy.sh'
+  entrypoint: 'entrypoint.sh'
