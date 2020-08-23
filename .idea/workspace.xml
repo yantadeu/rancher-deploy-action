@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Yan Tadeu &lt;yan.tadeu1@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gTcKZlodqTcWInqQcxZqWh6zXT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="" />
+      <created>1598141960046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598141960046</updated>
+    </task>
+    <task id="LOCAL-00001" summary="New configs actions.yaml">
+      <created>1598142012158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598142012158</updated>
+    </task>
+    <task id="LOCAL-00002" summary="New configs actions.yaml">
+      <created>1598142044449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598142044449</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New configs tests actions.yaml">
+      <created>1598143750858</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598143750858</updated>
+    </task>
+    <task id="LOCAL-00004" summary="New configs tests actions.yaml">
+      <created>1598144203237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598144203237</updated>
+    </task>
+    <task id="LOCAL-00005" summary="config the entrypoint.sh">
+      <created>1598195896897</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598195896897</updated>
+    </task>
+    <task id="LOCAL-00006" summary="config the entrypoint.sh">
+      <created>1598196252254</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598196252254</updated>
+    </task>
+    <task id="LOCAL-00007" summary="config the entrypoint.sh">
+      <created>1598196324880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598196324880</updated>
+    </task>
+    <task id="LOCAL-00008" summary="config the entrypoint.sh in Dockerfile">
+      <created>1598199571576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598199571576</updated>
+    </task>
+    <task id="LOCAL-00009" summary="config the entrypoint.sh in Dockerfile">
+      <created>1598199979623</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598199979623</updated>
+    </task>
+    <task id="LOCAL-00010" summary="config the entrypoint.sh in Dockerfile">
+      <created>1598201394887</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598201394887</updated>
+    </task>
+    <task id="LOCAL-00011" summary="config the entrypoint.sh in Dockerfile">
+      <created>1598201434230</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598201434230</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New configs actions.yaml" />
+    <MESSAGE value="New configs tests actions.yaml" />
+    <MESSAGE value="config the entrypoint.sh" />
+    <MESSAGE value="config the entrypoint.sh in Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="config the entrypoint.sh in Dockerfile" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598194314507">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598201433969">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598201433969" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598201436040">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598201436040" />
+  </component>
+</project>
