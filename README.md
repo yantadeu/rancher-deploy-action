@@ -36,9 +36,9 @@ Response code to
 
 uses: actions/rancher-deploy-action@v1
 with:
-  rancher_access_key: 'XXXXXXX',
-  rancher_secret_key: 'XXXXXXX',
-  rancher_workload_url_api: 'https://rancher.YOUR-DOMAIN.COM/v3/project/PROJECT_ID/workloads',
-  rancher_namespace: 'default',
-  service_name: 'NAME OF YOUR SERVICE ON RANCHER CLUSTER',
+  rancher_access_key: 'XXXXXXX'
+  rancher_secret_key: 'XXXXXXX'
+  rancher_workload_url_api: 'https://rancher.YOUR-DOMAIN.COM/v3/project/PROJECT_ID/workloads'
+  rancher_namespace: 'default'
+  service_name: 'NAME OF YOUR SERVICE ON RANCHER CLUSTER'
   docker_image: 'URL TO YOUR DOCKER IMAGE (Ex: AWS or DOCKER REGISTRY)'
