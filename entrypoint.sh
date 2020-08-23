@@ -38,6 +38,8 @@ if [ -z "${rancher_docker_image}" ]; then
     exit 1
 fi
 
-python3 deploy_to_rancher.py --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
+python --version
+
+python deploy_to_rancher.py --rancher_access_key="${rancher_access_key}" --rancher_secret_key="${rancher_secret_key}" --rancher_workload_url_api="${rancher_workload_url_api}" --rancher_namespace="${rancher_namespace}" --rancher_service_name="${rancher_service_name}" --rancher_docker_image="${rancher_docker_image}"
 
 exit 0
