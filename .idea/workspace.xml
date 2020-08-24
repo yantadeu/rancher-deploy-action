@@ -6,7 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/action.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy_to_rancher.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploy_to_rancher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598270295485</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="new config to arguments script py">
+      <created>1598272408025</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1598272408025</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -220,14 +227,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
-    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598270295211">
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598272407737">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598270295211" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598270296615">
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598272407737" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598272409156">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598270296615" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598272409156" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598272402584">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

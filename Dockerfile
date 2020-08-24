@@ -5,4 +5,6 @@ COPY . /
 RUN chmod +x /entrypoint.sh
 RUN pip install -r /requirements.txt
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+WORKDIR /
+
+CMD python deploy_to_rancher.py

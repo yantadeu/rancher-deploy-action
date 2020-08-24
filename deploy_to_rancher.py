@@ -1,4 +1,5 @@
 import getopt
+import os
 import sys
 import click
 import requests
@@ -12,7 +13,7 @@ class DeployRancher:
         self.rancher_workload_url_api = rancher_workload_url_api
         self.rancher_namespace = rancher_namespace
         self.service_name = rancher_service_name
-        self.rancher_deployment_path = '/deployment:'+self.rancher_namespace+':' + self.service_name
+        self.rancher_deployment_path = '/deployment:' + self.rancher_namespace + ':' + self.service_name
         self.docker_image = rancher_docker_image
 
     def deploy(self):
@@ -47,16 +48,17 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_u
 
 
 if __name__ == '__main__':
-    argv = sys.argv[1:]
-
+    rancher_access_key = os.getenv('INPUT_RANCHER_ACCESS_KEY')
+    print(rancher_access_key)
+    rancher_secret_key = os.getenv('INPUT_RANCHER_SECRET_KEY')
+    rancher_workload_url_api = os.getenv('INPUT_RANCHER_WORKLOAD_URL_API')
+    rancher_namespace = os.getenv('INPUT_RANCHER_NAMESPACE')
+    rancher_service_name = os.getenv('INPUT_SERVICE_NAME')
+    rancher_docker_image = os.getenv('INPUT_DOCKER_IMAGE')
     try:
-        print(argv)
-        if len(argv) != 6:
-            print('usage: deploy_to_rancher.py <first_operand> <second_operand> '
-                  '<third_operand> <fourth_operand> <fifth_operand> <sixth_operand>')
-            sys.exit(1)
-        else:
-            deploy_in_rancher(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5])
+
+        deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
+                          rancher_service_name, rancher_docker_image)
 
     except getopt.GetoptError:
         print('usage: deploy_to_rancher.py <first_operand> <second_operand> '
