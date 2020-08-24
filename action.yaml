@@ -33,6 +33,5 @@ runs:
   steps:
     - run: echo sending to rancher.
       shell: bash
-    - id: rancher deploy
-      run: python deploy_to_rancher.py --rancher_access_key=${{ inputs.rancher_access_key }} --rancher_secret_key=${{ inputs.rancher_secret_key }} --rancher_workload_url_api=${{ inputs.rancher_workload_url_api }} --rancher_namespace=${{ inputs.rancher_namespace }} --rancher_service_name=${{ inputs.service_name }} --rancher_docker_image=${{ inputs.docker_image }}
+    - run: python deploy_to_rancher.py --rancher_access_key=${{ inputs.rancher_access_key }} --rancher_secret_key=${{ inputs.rancher_secret_key }} --rancher_workload_url_api=${{ inputs.rancher_workload_url_api }} --rancher_namespace=${{ inputs.rancher_namespace }} --rancher_service_name=${{ inputs.service_name }} --rancher_docker_image=${{ inputs.docker_image }}
       shell: bash
