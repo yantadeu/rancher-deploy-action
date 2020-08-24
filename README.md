@@ -28,6 +28,7 @@
 
 
 ## Example usage
+`````
   
 - name: Rancher Deploy
   uses: yantadeu/rancher-deploy-action@v0.0.1
