@@ -4,30 +4,6 @@ author: 'Yan Tadeu'
 branding:
   icon: 'check'
   color: 'gray-dark'
-
-inputs:
-  rancher_access_key:
-    description: 'API Access key created in Rancher'
-    required: true
-  rancher_secret_key:
-    description: 'API Secret key created in Rancher'
-    required: true
-  rancher_workload_url_api:
-    description: 'API Url of your rancher project workload.'
-    required: true
-  rancher_namespace:
-    description: 'API Access key created in Rancher'
-    required: true
-  service_name:
-    description: 'Your namespace project'
-    required: true
-    default: 'default'
-  docker_image:
-    description: 'URL TO YOUR DOCKER IMAGE (Ex: AWS or DOCKER REGISTRY)'
-    required: true
-outputs:
-  response:
-    description: "Deploy Response"
 runs:
   using: 'docker'
   image: 'Dockerfile'

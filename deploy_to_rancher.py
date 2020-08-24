@@ -1,4 +1,3 @@
-import getopt
 import os
 import sys
 import requests
@@ -37,7 +36,7 @@ class DeployRancher:
 
             requests.put(self.rancher_workload_url_api + self.rancher_deployment_path + '?action=redeploy',
                          json=response, auth=(self.access_key, self.secret_key))
-
+        sys.exit(0)
 
 def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                       rancher_service_name, rancher_docker_image):
@@ -48,7 +47,6 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_u
 
 if __name__ == '__main__':
     rancher_access_key = os.environ['RANCHER_ACCESS_KEY']
-    print(rancher_access_key)
     rancher_secret_key = os.environ['RANCHER_SECRET_KEY']
     rancher_workload_url_api = os.environ['RANCHER_WORKLOAD_URL_API']
     rancher_namespace = os.environ['RANCHER_NAMESPACE']
@@ -58,5 +56,6 @@ if __name__ == '__main__':
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                           rancher_service_name, rancher_docker_image)
 
-    except getopt.GetoptError:
+    except Exception as e:
+        print(e)
         sys.exit(1)
