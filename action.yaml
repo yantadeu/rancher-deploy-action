@@ -29,12 +29,13 @@ outputs:
   response:
     description: "Deploy Response"
 runs:
-  using: "composite"
-  steps:
-    - run: echo sending to rancher.
-      shell: bash
-    - run: |
-        pip install click
-        pip install requests
-        python deploy_to_rancher.py --rancher_access_key=${{ inputs.rancher_access_key }} --rancher_secret_key=${{ inputs.rancher_secret_key }} --rancher_workload_url_api=${{ inputs.rancher_workload_url_api }} --rancher_namespace=${{ inputs.rancher_namespace }} --rancher_service_name=${{ inputs.service_name }} --rancher_docker_image=${{ inputs.docker_image }}
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.rancher_access_key }}
+    - ${{ inputs.rancher_secret_key }}
+    - ${{ inputs.rancher_workload_url_api }}
+    - ${{ inputs.rancher_namespace }}
+    - ${{ inputs.service_name }}
+    - ${{ inputs.docker_image }}
+  entrypoint: '/entrypoint.sh'

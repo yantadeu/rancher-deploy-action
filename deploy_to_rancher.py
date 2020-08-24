@@ -1,3 +1,4 @@
+import getopt
 import sys
 import click
 import requests
@@ -38,19 +39,6 @@ class DeployRancher:
                          json=response, auth=(self.access_key, self.secret_key))
 
 
-@click.command()
-@click.option('--rancher_access_key', default=None,
-              help='access key api')
-@click.option('--rancher_secret_key', default=None,
-              help='secret key api')
-@click.option('--rancher_workload_url_api', default=None,
-              help='url api workload')
-@click.option('--rancher_namespace', default=None,
-              help='name of namespace')
-@click.option('--rancher_service_name', default=None,
-              help='name of service')
-@click.option('--rancher_docker_image', default=None,
-              help='name of docker repo')
 def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                       rancher_service_name, rancher_docker_image):
     deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
@@ -59,9 +47,18 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_u
 
 
 if __name__ == '__main__':
+    argv = sys.argv[1:]
+
     try:
-        deploy_in_rancher()
-        sys.exit(0)
-    except ValueError as e:
-        print(e)
+        print(argv)
+        if len(argv) != 6:
+            print('usage: deploy_to_rancher.py <first_operand> <second_operand> '
+                  '<third_operand> <fourth_operand> <fifth_operand> <sixth_operand>')
+            sys.exit(1)
+        else:
+            deploy_in_rancher(argv[0], argv[1], argv[2], argv[3], argv[4], argv[5])
+
+    except getopt.GetoptError:
+        print('usage: deploy_to_rancher.py <first_operand> <second_operand> '
+              '<third_operand> <fourth_operand> <fifth_operand> <sixth_operand>')
         sys.exit(1)
