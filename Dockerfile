@@ -1,10 +1,11 @@
-FROM python:3.8
+FROM python:3.8 AS builder
+ADD . /app
+WORKDIR /app
 
-COPY . /
+RUN pip install --target=/app requests
 
-RUN chmod +x /entrypoint.sh
-RUN pip install -r /requirements.txt
-
-CMD python /deploy_to_rancher.py
-
-ENTRYPOINT [ "/entrypoint.sh" ]
+FROM gcr.io/distroless/python3-debian10
+COPY --from=builder /app /app
+WORKDIR /app
+ENV PYTHONPATH /app
+CMD ["/app/deploy_to_rancher.py"]

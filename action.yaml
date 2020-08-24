@@ -31,11 +31,3 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.rancher_access_key }}
-    - ${{ inputs.rancher_secret_key }}
-    - ${{ inputs.rancher_workload_url_api }}
-    - ${{ inputs.rancher_namespace }}
-    - ${{ inputs.service_name }}
-    - ${{ inputs.docker_image }}
-  entrypoint: '/entrypoint.sh'
