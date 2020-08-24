@@ -1,8 +1,8 @@
 FROM python:3.8
 
 COPY . /
+WORKDIR /
 
-RUN chmod +x /entrypoint.sh
-RUN pip install -r /requirements.txt
+RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+CMD python deploy_to_rancher.py
