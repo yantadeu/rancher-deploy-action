@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db6a173e-3c0e-4fab-85f9-20be9cf4fc57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rancher_deploy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/action.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy_to_rancher.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploy_to_rancher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rancher_deploy.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598273711950</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="new config to arguments script python">
+      <created>1598277354943</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1598277354943</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -260,25 +266,26 @@
     <MESSAGE value="config the entrypoint.sh in Dockerfile" />
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="new config to arguments script py" />
-    <option name="LAST_COMMIT_MESSAGE" value="new config to arguments script py" />
+    <MESSAGE value="new config to arguments script python" />
+    <option name="LAST_COMMIT_MESSAGE" value="new config to arguments script python" />
   </component>
   <component name="WindowStateProjectService">
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598194314507">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="454" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598194314507" />
-    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598273711722">
+    <state x="332" y="25" key="CommitChangelistDialog2" timestamp="1598277354429">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598273711722" />
+    <state x="332" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598277354429" />
     <state x="361" y="218" key="MultipleFileMergeDialog" timestamp="1598273156514">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="361" y="218" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1598273156514" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598273713187">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598277356435">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598273713187" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598277356435" />
     <state x="44" y="337" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598275189938">
       <screen x="0" y="23" width="1440" height="801" />
     </state>

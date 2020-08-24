@@ -47,18 +47,16 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_u
 
 
 if __name__ == '__main__':
-    rancher_access_key = os.environ['INPUT_RANCHER_ACCESS_KEY']
+    rancher_access_key = os.environ['RANCHER_ACCESS_KEY']
     print(rancher_access_key)
-    rancher_secret_key = os.environ['INPUT_RANCHER_SECRET_KEY']
-    rancher_workload_url_api = os.environ['INPUT_RANCHER_WORKLOAD_URL_API']
-    rancher_namespace = os.environ['INPUT_RANCHER_NAMESPACE']
-    rancher_service_name = os.environ['INPUT_SERVICE_NAME']
-    rancher_docker_image = os.environ['INPUT_DOCKER_IMAGE']
+    rancher_secret_key = os.environ['RANCHER_SECRET_KEY']
+    rancher_workload_url_api = os.environ['RANCHER_WORKLOAD_URL_API']
+    rancher_namespace = os.environ['RANCHER_NAMESPACE']
+    rancher_service_name = os.environ['SERVICE_NAME']
+    rancher_docker_image = os.environ['DOCKER_IMAGE']
     try:
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_workload_url_api, rancher_namespace,
                           rancher_service_name, rancher_docker_image)
 
     except getopt.GetoptError:
-        print('usage: deploy_to_rancher.py <first_operand> <second_operand> '
-              '<third_operand> <fourth_operand> <fifth_operand> <sixth_operand>')
         sys.exit(1)
