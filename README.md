@@ -10,13 +10,9 @@
 
 **Required** API Secret key created in Rancher.
 
-### `RANCHER_WORKLOAD_URL_API`
+### `RANCHER_URL_API`
 
 **Required** API Url of your rancher project workload.
-
-### `RANCHER_NAMESPACE`
-
-**Required** Your namespace project . Default `"default"`.
 
 ### `SERVICE_NAME`
 
@@ -31,11 +27,10 @@
 `````
   
 - name: Rancher Deploy
-  uses: yantadeu/rancher-deploy-action@v0.0.1
+  uses: yantadeu/rancher-deploy-action@v0.0.2
   env:
     RANCHER_ACCESS_KEY: 'XXXXXXX'
     RANCHER_SECRET_KEY: 'XXXXXXX'
-    RANCHER_WORKLOAD_URL_API: 'https://rancher.YOUR-DOMAIN.COM/v3/project/PROJECT_ID/workloads'
-    RANCHER_NAMESPACE: 'default'
+    RANCHER_URL_API: 'https://rancher.YOUR-DOMAIN.COM/v3'
     SERVICE_NAME: 'myProject'
     DOCKER_IMAGE: 'xxxxxxx:yyyyyyyy'
