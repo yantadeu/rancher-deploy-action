@@ -22,6 +22,10 @@
 
 **Required** URL TO YOUR DOCKER IMAGE (Ex: AWS or DOCKER REGISTRY).
 
+### `DOCKER_IMAGE_LATEST`
+
+**Optional** URL TO YOUR DOCKER IMAGE WITH LATEST TAG.
+
 
 ## Example usage
 `````
@@ -34,3 +38,4 @@
     RANCHER_URL_API: 'https://rancher.YOUR-DOMAIN.COM/v3'
     SERVICE_NAME: 'myProject'
     DOCKER_IMAGE: 'xxxxxxx:yyyyyyyy'
+    DOCKER_IMAGE_LATEST: 'xxxxxxx:latest'

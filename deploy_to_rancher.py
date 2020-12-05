@@ -68,9 +68,14 @@ if __name__ == '__main__':
     rancher_url_api = os.environ['RANCHER_URL_API']
     rancher_service_name = os.environ['SERVICE_NAME']
     rancher_docker_image = os.environ['DOCKER_IMAGE']
+    rancher_docker_image_latest = os.environ['DOCKER_IMAGE_LATEST']
     try:
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
                           rancher_service_name, rancher_docker_image)
+        
+        if rancher_docker_image_latest != None and rancher_docker_image_latest != "":
+            deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api, 
+                              rancher_service_name, rancher_docker_image_latest)
 
     except Exception as e:
         print(e)
