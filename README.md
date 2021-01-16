@@ -1,4 +1,4 @@
-# Action to deploy image in Rancher using Rancher API
+# Action for Github to deploy image in Rancher using Rancher API
 
 ## Envs
 
