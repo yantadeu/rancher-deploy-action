@@ -56,7 +56,7 @@ class DeployRancher:
 
             requests.put(self.rancher_deployment_path + '?action=redeploy',
                          json=response, auth=(self.access_key, self.secret_key))
-        print(f"Deploy complete!{ response }")
+        print(f"\033[0;32m Deploy complete!{ rget }")
         sys.exit(0)
 
 
@@ -69,12 +69,12 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
 
 
 if __name__ == '__main__':
-    rancher_access_key = os.environ['RANCHER_ACCESS_KEY']
-    rancher_secret_key = os.environ['RANCHER_SECRET_KEY']
-    rancher_url_api = os.environ['RANCHER_URL_API']
-    rancher_service_name = os.environ['SERVICE_NAME']
-    rancher_docker_image = os.environ['DOCKER_IMAGE']
-    rancher_docker_image_latest = os.environ['DOCKER_IMAGE_LATEST']
+    rancher_access_key = 'token-n123'
+    rancher_secret_key = 'hjnjnh5rbwwjp55l96crhtgfp7h7psgmhbfftfb4jvc8bmwp7l6zl8'
+    rancher_url_api = 'https://rancher.d3.do/v3'
+    rancher_service_name = 'd3-site-content'
+    rancher_docker_image = '929907635541.dkr.ecr.us-east-1.amazonaws.com/d3-site-content:f3f87b6103593e676dca7188b39eb881fd047ea3'
+    rancher_docker_image_latest = '929907635541.dkr.ecr.us-east-1.amazonaws.com/d3-site-content:f3f87b6103593e676dca7188b39eb881fd047ea3'
     
     try:
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
@@ -83,12 +83,14 @@ if __name__ == '__main__':
         if rancher_docker_image_latest != None and rancher_docker_image_latest != "":
             deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api, 
                                 rancher_service_name, rancher_docker_image_latest)
-         
+              
     except KeyError as a:
         request_error = DeployRancher(rancher_access_key, rancher_secret_key, rancher_url_api,
                             rancher_service_name, rancher_docker_image)
-        print(f"Error ocurred in request  {a} --> {request_error.get_rancher()}")
-        # print(dir(request_error.get_rancher()))
+        print(f"""
+              \033[1;31m Error ocurred in request of {a}!
+               Response --> {request_error.get_rancher().json()} \033[0;0m
+                """)
         sys.exit(1)
         
         
