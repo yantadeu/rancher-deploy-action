@@ -69,12 +69,12 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
 
 
 if __name__ == '__main__':
-    rancher_access_key = 'token-n123'
-    rancher_secret_key = 'hjnjnh5rbwwjp55l96crhtgfp7h7psgmhbfftfb4jvc8bmwp7l6zl8'
-    rancher_url_api = 'https://rancher.d3.do/v3'
-    rancher_service_name = 'd3-site-content'
-    rancher_docker_image = '929907635541.dkr.ecr.us-east-1.amazonaws.com/d3-site-content:f3f87b6103593e676dca7188b39eb881fd047ea3'
-    rancher_docker_image_latest = '929907635541.dkr.ecr.us-east-1.amazonaws.com/d3-site-content:f3f87b6103593e676dca7188b39eb881fd047ea3'
+    rancher_access_key = os.environ['RANCHER_ACCESS_KEY']
+    rancher_secret_key = os.environ['RANCHER_SECRET_KEY']
+    rancher_url_api = os.environ['RANCHER_URL_API']
+    rancher_service_name = os.environ['SERVICE_NAME']
+    rancher_docker_image = os.environ['DOCKER_IMAGE']
+    rancher_docker_image_latest = os.environ['DOCKER_IMAGE_LATEST']
     
     try:
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
