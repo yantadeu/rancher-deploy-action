@@ -3,6 +3,20 @@ import sys
 import requests
 from requests.api import request
 
+class Log:
+    def __init__(self, request):
+        self.request = request
+        
+    def status_request(self):
+        if self.request.status_code > 200 and self.request.status_code < 299:
+            print(f"""
+               \033[92m REPONSE --> {self.request.json()}  \033[0;0m
+            """)
+        else:
+            print(f"""
+                \033[1;31m RESPONSE --> {self.request.json()} \033[0;0m
+            """)
+        
 
 class DeployRancher:
     def __init__(self, rancher_access_key, rancher_secret_key, rancher_url_api,
@@ -16,11 +30,11 @@ class DeployRancher:
         self.rancher_namespace = ''
         self.rancher_workload_url_api = ''
 
-    def get_rancher(self):
+    def rancher_auth(self):
         return requests.get('{}/projects'.format(self.rancher_url_api), auth=(self.access_key, self.secret_key))
 
     def deploy(self):
-        rp = self.get_rancher()
+        rp = self.rancher_auth()
         projects = rp.json()
         for p in projects['data']:
             w_url = '{}/projects/{}/workloads'.format(self.rancher_url_api, p['id'])
@@ -55,8 +69,8 @@ class DeployRancher:
             response['containers'][0]['image'] = self.docker_image
 
             requests.put(self.rancher_deployment_path + '?action=redeploy',
-                         json=response, auth=(self.access_key, self.secret_key))
-        print(f"\033[0;32m Deploy complete!{ rget }")
+                         json=response, auth=(self.access_key, self.secret_key))  
+        Log(rget).status_request()
         sys.exit(0)
 
 
@@ -76,6 +90,9 @@ if __name__ == '__main__':
     rancher_docker_image = os.environ['DOCKER_IMAGE']
     rancher_docker_image_latest = os.environ['DOCKER_IMAGE_LATEST']
     
+    log = Log(DeployRancher(rancher_access_key, rancher_secret_key, rancher_url_api,
+             rancher_service_name, rancher_docker_image).rancher_auth())
+    
     try:
         deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
                             rancher_service_name, rancher_docker_image)
@@ -83,14 +100,9 @@ if __name__ == '__main__':
         if rancher_docker_image_latest != None and rancher_docker_image_latest != "":
             deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api, 
                                 rancher_service_name, rancher_docker_image_latest)
-              
-    except KeyError as a:
-        request_error = DeployRancher(rancher_access_key, rancher_secret_key, rancher_url_api,
-                            rancher_service_name, rancher_docker_image)
-        print(f"""
-              \033[1;31m Error ocurred in request of {a}!
-               Response --> {request_error.get_rancher().json()} \033[0;0m
-                """)
+                 
+    except KeyError:
+        log.status_request()
         sys.exit(1)
         
         
