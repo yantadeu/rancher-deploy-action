@@ -10,11 +10,11 @@ class Log:
     def status_request(self):
         if self.request.status_code > 200 and self.request.status_code < 299:
             print(f"""
-               \033[92m REPONSE --> {self.request.json()}  \033[0;0m
+               \033[92m REPONSE --> {self.request}  \033[0;0m
             """)
         else:
             print(f"""
-                \033[1;31m RESPONSE --> {self.request.json()} \033[0;0m
+                \033[1;31m RESPONSE --> {self.request} \033[0;0m
             """)
         
 
@@ -31,7 +31,7 @@ class DeployRancher:
         self.rancher_workload_url_api = ''
 
     def rancher_auth(self):
-        return requests.get('{}/projects'.format(self.rancher_url_api), auth=(self.access_key, self.secret_key))
+        return requests.get('{}/projects/c-hmjq4:p-4xx87/workloads'.format(self.rancher_url_api), auth=(self.access_key, self.secret_key))
 
     def deploy(self):
         rp = self.rancher_auth()
@@ -78,7 +78,7 @@ def deploy_in_rancher(rancher_access_key, rancher_secret_key, rancher_url_api,
                       rancher_service_name, rancher_docker_image):
     deployment = DeployRancher(rancher_access_key, rancher_secret_key, rancher_url_api,
                                rancher_service_name, rancher_docker_image)
-    deployment.deploy()
+    print(deployment.rancher_auth())
     return deployment
 
 
@@ -104,6 +104,7 @@ if __name__ == '__main__':
     except KeyError:
         log.status_request()
         sys.exit(1)
+
         
         
  
