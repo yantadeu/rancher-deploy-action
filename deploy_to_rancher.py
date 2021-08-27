@@ -10,11 +10,11 @@ class Log:
     def status_request(self):
         if self.request.status_code > 200 and self.request.status_code < 299:
             print(f"""
-               \033[92m REPONSE --> {self.request}  \033[0;0m
+               \033[92m REPONSE --> {self.request.json()}  \033[0;0m
             """)
         else:
             print(f"""
-                \033[1;31m RESPONSE --> {self.request} \033[0;0m
+                \033[1;31m RESPONSE --> {self.request.json()} \033[0;0m
             """)
         
 
